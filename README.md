@@ -35,14 +35,11 @@ Split and Merge RGB Image
 ### Step10:
 Split and merge HSV Image
 
-##### Program:
+### Program:
+```py
+Developed By: KULASEKARAPANDIAN K
+Register Number: 212222240052
 ```
-### Developed By: KULASEKARAPANDIAN K
-### Register Number: 212222240052
-```
-<table>
-  <tr>
-    <td width=50%>
 
 ### i) Read and display the image
 ```Python
