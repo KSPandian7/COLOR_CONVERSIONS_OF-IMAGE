@@ -73,6 +73,7 @@ Register Number: 212222240052
 ```
   </td>
   <td>
+>>>>>>> 6163ecfe6645630cb489a3532a0defcbbc1e7ac0
 
 ### OUTPUT:
 ![image](https://github.com/KSPandian7/COLOR_CONVERSIONS_OF-IMAGE/assets/113496887/b1fd16ce-158f-47c4-a8aa-fee396cca5a7)
@@ -84,6 +85,15 @@ Register Number: 212222240052
     <td width=50%>
 
 ### iii)Shape of the Image
+<<<<<<< HEAD
+```py
+import cv2
+image=cv2.imread('TEMPLEksp.jpg',1)
+print(image.shape)
+```
+### OUTPUT:
+![OUTPUT](/output3.png)
+=======
 ```Python
     import cv2
     image=cv2.imread('dip.jpg',1)
@@ -91,6 +101,7 @@ Register Number: 212222240052
 ```
   </td>
   <td>
+>>>>>>> 6163ecfe6645630cb489a3532a0defcbbc1e7ac0
 
 ### OUTPUT:
 ![image](https://github.com/KSPandian7/COLOR_CONVERSIONS_OF-IMAGE/assets/113496887/371b955b-5801-4748-8a11-c87bc92723ad)
@@ -103,6 +114,27 @@ Register Number: 212222240052
     <td>
       
 ### iv)Access rows and columns
+<<<<<<< HEAD
+```py
+import random
+import cv2
+image=cv2.imread('TEMPLEksp.jpg',1)
+image=cv2.resize(image,(400,400))
+for i in range (90,200):
+    for j in range(image.shape[1]):
+        image[i][j]=[random.randint(0,255),
+                    random.randint(0,255),
+                    random.randint(0,255)] 
+cv2.imshow('IMAGE',image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+### OUTPUT:
+![OUTPUT](/oop4.png)
+
+<br>
+<br>
+=======
 ```Python
     import random
     import cv2
@@ -119,6 +151,7 @@ Register Number: 212222240052
 ```
   </td>
   <td width="50%">
+>>>>>>> 6163ecfe6645630cb489a3532a0defcbbc1e7ac0
 
 ### OUTPUT:
 ![image](https://github.com/KSPandian7/COLOR_CONVERSIONS_OF-IMAGE/assets/113496887/61f23712-cebd-48db-9607-883364eae91e)
@@ -130,6 +163,33 @@ Register Number: 212222240052
       
 ### v)Cut and paste portion of image
 
+<<<<<<< HEAD
+```py
+import cv2
+image = cv2.imread('TEMPLEksp.jpg', 1)
+image = cv2.resize(image, (400, 350))
+tag = image[90:200, 50:160]
+image[50:160, 90:200] = tag
+cv2.imshow('CUT & PASTE', image)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+```
+
+### OUTPUT:
+![OUTPUT](/cut.png)
+<br>
+<br>
+
+### vi) BGR and RGB to HSV and GRAY
+```py
+img = cv2.imread('TEMPLEksp.jpg',1)
+img = cv2.resize(image,(400,400))
+
+cv2.imshow('RESULTS',img)
+
+=======
  ```Python
    import cv2
    image=cv2.imread('dip.jpg',1)
@@ -156,6 +216,7 @@ import cv2
 img = cv2.imread('dip.jpg',1)
 img = cv2.resize(img,(200,200))
 cv2.imshow('Original Image',img)
+>>>>>>> 6163ecfe6645630cb489a3532a0defcbbc1e7ac0
 
 hsv1 = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
 cv2.imshow('BGR2HSV',hsv1)
@@ -174,6 +235,22 @@ cv2.destroyAllWindows()
 ```
 
 ### OUTPUT:
+<<<<<<< HEAD
+![OUTPUT](/cc.png)
+<br>
+<br>
+
+### vii) HSV to RGB and BGR
+
+```py
+
+import cv2
+img = cv2.imread('TEMPLEksp.jpg')
+img = cv2.resize(img,(400,400))
+
+img = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+cv2.imshow('Og HSV Img',img)
+=======
 ![image](https://github.com/KSPandian7/COLOR_CONVERSIONS_OF-IMAGE/assets/113496887/ac148455-bbc5-4816-9688-32c07e2e76fa)
 
 
@@ -186,6 +263,7 @@ img = cv2.resize(img,(200,200))
 
 img = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
 cv2.imshow('Original HSV Image',img)
+>>>>>>> 6163ecfe6645630cb489a3532a0defcbbc1e7ac0
 
 RGB = cv2.cvtColor(img,cv2.COLOR_HSV2RGB)
 cv2.imshow('2HSV2BGR',RGB)
@@ -195,6 +273,25 @@ cv2.imshow('HSV2RGB',BGR)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+<<<<<<< HEAD
+
+```
+
+### OUTPUT:
+![OUTPUT](/hsv2.png)
+
+
+<br>
+<br>
+
+### viii) RGB and BGR to YCrCb
+
+```py
+import cv2
+img = cv2.imread('TEMPLEksp.jpg')
+img = cv2.resize(img,(400,300))
+cv2.imshow('Og RGB Img',img)
+=======
 ```
 
 ### OUTPUT:
@@ -208,6 +305,7 @@ import cv2
 img = cv2.imread('dip.jpg')
 img = cv2.resize(img,(200,200))
 cv2.imshow('Original RGB Image',img)
+>>>>>>> 6163ecfe6645630cb489a3532a0defcbbc1e7ac0
 
 YCrCb1 = cv2.cvtColor(img, cv2.COLOR_BGR2YCrCb)
 cv2.imshow('RGB-2-YCrCb',YCrCb1)
@@ -220,6 +318,66 @@ cv2.destroyAllWindows()
 ```
 
 ### OUTPUT:
+<<<<<<< HEAD
+![OUTPUT](/ycrcb.png)
+
+<br>
+<br>
+
+### ix) Split and merge RGB Image
+```py
+import cv2
+img = cv2.imread('TEMPLEksp.jpg', 1)
+img = cv2.resize(img, (300, 300))
+
+R = img[:, :, 2]
+G = img[:, :, 1]
+B = img[:, :, 0]
+
+cv2.imshow('R-Channel', R)
+cv2.imshow('G-Channel', G)
+cv2.imshow('B-Channel', B)
+
+merged = cv2.merge((B, G, R))
+cv2.imshow('Merged RGB image', merged)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+```
+
+### OUTPUT:
+![OUTPUT](/merge.png)
+<br>
+<br>
+
+### x) Split and merge HSV Image
+```py
+import cv2
+img = cv2.imread("TEMPLEksp.jpg",1)
+img = cv2.resize(img,(300,300))
+img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
+
+H,S,V=cv2.split(img)
+
+cv2.imshow('Hue',H)
+cv2.imshow('Saturation',S)
+cv2.imshow('Value',V)
+
+merged = cv2.merge((H,S,V))
+cv2.imshow('Merged',merged)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+
+### OUTPUT:
+![OUTPUT](/mergehsv.png)
+
+
+<br>
+<br>
+=======
 ![image](https://github.com/KSPandian7/COLOR_CONVERSIONS_OF-IMAGE/assets/113496887/fea02f52-0bec-4d2d-b742-2b549283cd10)
 
 
@@ -256,6 +414,7 @@ import cv2
 img = cv2.imread("blue.jpg",1)
 img = cv2.resize(img,(200,200))
 img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
+>>>>>>> 6163ecfe6645630cb489a3532a0defcbbc1e7ac0
 
 H,S,V=cv2.split(img)
 
@@ -276,10 +435,3 @@ cv2.destroyAllWindows()
 
 ## Result:
 Thus the images are read, displayed, and written ,and color conversion was performed between RGB, HSV and YCbCr color models successfully using the python program.
-
-
-
-
-
-
-
